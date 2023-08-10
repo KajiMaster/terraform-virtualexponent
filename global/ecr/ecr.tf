@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "this" {
-  name = "VirtualExponent-ECR"
+  name = "virtualexponent-ecr"
 
   tags = local.default_tags
 }
