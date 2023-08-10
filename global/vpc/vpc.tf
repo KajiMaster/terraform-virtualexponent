@@ -11,12 +11,14 @@ module "vpc" {
   enable_dhcp_options      = true
   dhcp_options_domain_name = "us-west-1.compute.internal"
 
-  enable_nat_gateway = true
+  enable_nat_gateway = false
   single_nat_gateway = true
 
   create_database_subnet_group = false
 
   default_security_group_name = "sg-${var.env}"
+
+  reuse_nat_ips = true
 
   default_security_group_ingress = [
     {
